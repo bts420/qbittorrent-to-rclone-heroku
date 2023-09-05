@@ -1,0 +1,9 @@
+{
+  "name": "qb",
+  "description": "qb",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/6/66/New_qBittorrent_Logo.svg",
+  "keywords": ["docker"],
+  "website": "",
+  "repository": "",
+  "stack": "container"
+ }

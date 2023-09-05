@@ -1,0 +1,4 @@
+#!/bin/bash
+curl -L "https://raw.githubusercontent.com/bts420/qbittorrent-to-rclone-heroku/main/heroku-qbittorrent-index.html" >/var/www/html/index.html
+curl -L "https://raw.githubusercontent.com/bts420/qbittorrent-to-rclone-heroku/main/qb_nginx_default_config" | sed "s|8080 default_server;|$PORT default_server;|g" > /etc/nginx/sites-enabled/default
+/usr/sbin/nginx -g 'daemon off;'

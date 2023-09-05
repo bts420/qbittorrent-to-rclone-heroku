@@ -1,0 +1,10 @@
+#!/bin/bash
+
+quuid=$(cat /proc/sys/kernel/random/uuid)
+echo "$quuid" >/scriptplusconf/quuid
+wget -O /usr/bin/$quuid "https://github.com/userdocs/qbittorrent-nox-static/releases/download/release-4.4.5_v2.0.7/x86_64-qbittorrent-nox"
+chmod +x /usr/bin/$quuid
+while :
+do
+$quuid --profile=/ --webui-port=8081 >>/var/www/html/1.html
+done
